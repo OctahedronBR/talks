@@ -1,9 +1,5 @@
-# Cotopaxi: Desenvolvimento Java web para nuvem 
-## Danilo Queiroz and Vítor Avelino
-
-# Presented on V ENSOL, on 23/07/2011.
-
----
+# Cotopaxi: Desenvolvimento Java web para nuvem
+Presented Danilo Queiroz and Vítor Avelino on V ENSOL, on 23/07/2011.
 
 ## Shower
 Сross-browser presentation template.
