@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Cotopaxi</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1234, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<style>
+		#Cover h2 {
+			color:#FFF;
+			text-align: center;
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			margin-left: -500px;
+			font-size:70px;
+		}
+		#slide4 h2 { 
+			margin:-230px 0 0; 
+			font-size: 120px;
+			color: #fff;
+		}
+		img.lgpl {
+			position: absolute;
+			bottom: 90px;
+			right: 85px;
+		}
+		footer {
+			text-align: right;
+			position: absolute;
+			bottom: 80px;
+			right: 70px;
+			font-weight: bold;
+			font-size: 30px;
+			color: #fff;
+			line-height: 45px;
+		}
+		.comment { color: #888; }
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Cotopaxi: Desenvolvimento Java web para nuvem</h1>
+		<p>Danilo Queiroz e Vítor Avelino, Octahedron</p>
+	</header>
+	
+	<div class="slide bg" id="Cover"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi: Desenvolvimento Java web para nuvem</h2>
+			</header>
+			<img src="pictures/cotopaxibg.jpg" alt="">
+			<footer>
+				Danilo Queiroz e Vítor Avelino <br />
+				Octahedron
+			</footer>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide2"><div>
+		<section>
+			<header>
+				<h2>Nós</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide bg" id="slide3"><div>
+		<section>
+			<img src="pictures/octabg.png" alt="Octahedron"/>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide5"><div>
+		<section>
+			<header>
+				<h2>Motivação</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide6"><div>
+		<section>
+			<header>
+				<h2>Motivação</h2>
+			</header>
+			<p>Ambientes de computação em nuvem tem suas necessidades e restrições.</p>
+			<ul>
+				<li>Escalável</li>
+				<li>Leve (inicialização rápida)</li>
+			</ul>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide7"><div>
+		<section>
+			<header>
+				<h2>Motivação</h2>
+			</header>
+			<p>Fácil utilização.</p>
+			<p><mark class="important">Não</mark> devemos perder tempo com uma ferramenta.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide8"><div>
+		<section>
+			<header>
+				<h2>Como escalar?</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide9"><div>
+		<section>
+			<header>
+				<h2>Como escalar?</h2>
+			</header>
+			<blockquote>Linguagens não escalam, arquiteturas escalam!</blockquote>
+			Felipe Ribeiro
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide10"><div>
+		<section>
+			<header>
+				<h2>Como escalar?</h2>
+			</header>
+			<p>Escalar horizontalmente.</p>
+			<ul>
+				<li>Memcache</li>
+				<li>NoSQL / Partições</li>
+				<li>Assincronismo</li>
+				<li>...</li>
+			</ul>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide11"><div>
+		<section>
+			<header>
+				<h2>Java web</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide12"><div>
+		<section>
+			<header>
+				<h2>Java web</h2>
+			</header>
+			<p>Quem nunca ouviu falar de <mark>JSF</mark>, <mark>Struts</mark>, <mark>Spring</mark>?</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide13"><div>
+		<section>
+			<header>
+				<h2>Java web</h2>
+			</header>
+			<p>Quem nunca ouviu falar de <mark>JSF</mark>, <mark>Struts</mark>, <mark>Spring</mark>?</p>
+			<p>Nos últimos anos surgiram outras opções... <mark>playframework</mark>, <mark>VRaptor</mark>.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide14"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi</h2>
+			</header>
+			<p>Glue framework</p>
+			<ul>
+				<li>Core</li>
+				<li>Extensions</li>
+			</ul>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide15"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi</h2>
+			</header>
+			<ul>
+				<li>Github
+					<ul>
+						<li>Core - <a href="http://github.com/octahedron/cotopaxi-core">http://github.com/octahedron/cotopaxi-core</a></li>
+						<li>Extensions - <a href="http://github.com/octahedron/cotopaxi-extensions">http://github.com/octahedron/cotopaxi-extensions</a></li>
+						<li>Blank project - <a href="http://github.com/octahedron/cotopaxi-blank-project">http://github.com/octahedron/cotopaxi-blank-project</a></li>
+					</ul>
+				</li>
+				<li>Maven
+					<ul>
+						<li>Repositório - <a href="http://devel.octahedron.com.br/maven">http://devel.octahedron.com.br/maven</a></li>
+						<li>groupId - br.octahedron.cotopaxi</li>
+						<li>artifactId - core / extensions</li>
+					</ul>
+				</li>
+			</ul>
+			<img class="lgpl" src="pictures/lgplv3.png" />
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide16"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi</h2>
+			</header>
+			<p>Configuração em arquivo de texto, com sintaxe simples.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide17"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi</h2>
+			</header>
+			<p>Configuração em arquivo de texto, com sintaxe simples.</p>
+			<ul>
+				<li>Ficaria mais elegante com anotações, não?</li>
+				<li>Ferramentas para auxiliar a configuração seriam legais, não?</li>
+			</ul>
+		</section>
+	</div></div>
+	
+		<div class="slide shout" id="slide181"><div>
+		<section>
+			<header>
+				<h2>Core</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide18"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core</h2>
+			</header>
+			<ul>
+				<li>Rotas / Controllers</li>
+				<li>Injeção de dependência</li>
+				<li>Bootloaders</li>
+				<li>Interceptors</li>
+				<li>Validators</li>
+				<li>Converters</li>
+				<li>View</li>
+			</ul>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide19"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Rotas</h2>
+			</header>
+			<pre>
+				<code><mark>controllers</mark></code>
+				<code>	# Index controller</code>
+				<code>	br.octahedron.<mark>IndexController</mark></code>
+				<code>	<mark>/</mark>					<mark>get</mark>		<mark>Index</mark></code>
+				<code>	<mark>/hello</mark>				<mark>get</mark>		<mark>Hello</mark></code>
+				<code>	<mark>/hello/</mark><mark class="important">{name}</mark>		<mark>post</mark>		<mark>Hello</mark></code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide20"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<p>Contexto de requisição</p>
+			<p>Thread-safe, inspiração no Flask</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide21"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<pre>
+				<code>public class <mark>IndexController</mark> extends <mark>Controller</mark> {</code>
+				<code>	public void <mark>getIndex</mark>() { ... } <span class="comment">// /		get  Index</span></code>
+				<code>	public void <mark>getHello</mark>() { ... } <span class="comment">// /hello	get  Hello</span></code>
+				<code>	<span class="comment">// /hello/{name}  post  Hello</span></code>
+				<code>	public void <mark>postHello</mark>() { ... }</code>
+				<code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide22"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<pre>
+				<code><mark>in</mark>(key)</code>
+			</pre>
+			<p class="note">Recupera parâmetros do request.</p>
+			<pre>
+				<code><mark>out</mark>(key, value)</code>
+			</pre>
+			<p class="note">Adiciona valor na saída, podendo ser acessado na view.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide23"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<pre>
+				<code><mark>session</mark>(key)</code>
+			</pre>
+			<p class="note">Recupera dados da session.</p>
+			<pre>
+				<code><mark>session</mark>(key, value)</code>
+			</pre>
+			<p class="note">Armazena valores na session.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide24"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<pre>
+				<code><mark>render</mark>(template, code)</code>
+			</pre>
+			<p class="note">Renderiza o template e indica código HTTP adequado. Ex: 200, 404, etc.</p>
+			<pre>
+				<code><mark>redirect</mark>(url)</code>
+			</pre>
+			<p class="note">Redireciona para uma url</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide25"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Controller</h2>
+			</header>
+			<pre>
+				<code><mark>success</mark>(template)</code>
+			</pre>
+			<p class="note">O mesmo que render(template, 200).</p>
+			<pre>
+				<code><mark>error</mark>(template)</code>
+			</pre>
+			<p class="note">O mesmo que render(template, 500).</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide26"><div>
+		<section>
+			<pre>
+				<code>public class <mark>IndexController</mark> extends <mark>Controller</mark> {</code>
+				<code>	public void <mark>postHello</mark>() {</code>
+				<code>		if (<mark>in</mark>("name").equals("ENSL")) {</code>
+				<code>			<mark>redirect</mark>("http://ensl.org.br");</code>
+				<code>		} else {</code>
+				<code>			<mark>out</mark>("person", <mark>in</mark>("name"));</code>
+				<code>			<mark>success</mark>("hello.vm");</code>
+				<code>		}</code>
+				<code>	}</code>
+				<code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide27"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Injeção de dependência</h2>
+			</header>
+			<p>Simples e funcional</p>
+			<p>Alguma inspiração no Guice</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide28"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Injeção de dependência</h2>
+			</header>
+			<pre>
+				<code><mark>@Inject</mark></code>
+				<code>private UserManager userManager;</code>
+				<code>public void <mark>setUserManager</mark>(UserManager userManager) {</code>
+				<code>	this.userManager = userManager;</code>
+				<code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide29"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Bootloaders</h2>
+			</header>
+			<p>Executados na inicialização da aplicação antes do processamento do request.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide30"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Bootloaders</h2>
+			</header>
+			<p>Executados na inicialização da aplicação antes do processamento do request.</p>
+			<pre>
+				<code>bootloaders</code>
+				<code>	br.octahedron.SubscribersBootloader</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide31"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Interceptors</h2>
+			</header>
+			<p>Middlewares? :-)</p>
+			<p>ControllerInterceptor (autenticar/autorizar)</p>
+			<p>TemplateInterceptor (writer/atributos saída)</p>
+			<p>FinalizerInterceptor (finalizar request)</p>
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide38"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - Validação</h2>
+			</header>
+			<p>Simples e funcional</p>
+			<p>Inspirado no Mentawai</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide39"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - Validação</h2>
+			</header>
+			<pre>
+				<code>Validator validator = new <mark>Validator</mark>();</code>
+				<code>validator.add(<mark>"name"</mark>, <mark>required</mark>(<mark>"REQUIRED_USER_NAME"</mark>),</code>
+				<code><mark>regex</mark>(<mark>"([a-zA-ZáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûÃÕãõçÇ] *){2,}"</mark>,</code>
+				<code><mark>"INVALID_USER_NAME"</mark>));</code>
+				<code>...</code>
+				<code>if (validator.<mark>isValid</mark>()) {</code>
+				<code>...</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide321"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Converters</h2>
+			</header>
+			<p><em>Helper methods</em> para conversão de tipos dos dados de entrada.</p>
+			<ul>
+				<li>Data</li>
+				<li>Boolean</li>
+				<li>Números (byte, short, integer, big integer, long, double, float, big decimal)</li>
+				<li>Array de Strings</li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide322"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - Converters</h2>
+			</header>
+			<pre>
+				<code>Todo todo = todoDAO.get(in("id", <mark>number</mark>(<mark>NumberType.LONG</mark>)));</code>
+				<code>todo.setCompleted(in("completed", <mark>bool()</mark>));</code>
+			</pre>
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide32"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - View</h2>
+			</header>
+			<p>Hoje, usamos Velocity e JSON.</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide33"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Core - View</h2>
+			</header>
+			<p>Hoje, usamos Velocity e JSON.</p>
+			<p>Ou o que você quiser!</p>
+			<p>Quem sabe um dia um próprio compilador [Jinja2 for Java! :-) ]</p>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide331"><div>
+		<section>
+			<header>
+				<h2>Extensions</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide34"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions</h2>
+			</header>
+			<p>Funcionalidades + Implementação para plataformas específicas</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide35"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - Datastore</h2>
+			</header>
+			<p>Namespace/Multi-tenancy</p>
+			<p>JDO com um GenericDAO</p>
+			<p>JPA? Objectify? Diga-nos <mark class="important">você</mark>!</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide36"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - Datastore</h2>
+			</header>
+			<pre>
+				<code>public class UserDAO extends <mark>GenericDAO&lt;User&gt;</mark> {</code>
+				<code>	<span class="comment"> // save, delete, get, getAll, exists, count</span></code>
+				<code>}</code>
+			</pre>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide37"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - EventBus</h2>
+			</header>
+			<p>Assincronia e desaclopamento.</p>
+			<p><mark>Performance</mark>!</p>
+		</section>
+	</div></div>
+	
+	
+	<div class="slide" id="slide40"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions - Autenticação / Autorização</h2>
+			</header>
+			<p>Estender ControllerInterceptor abstrato</p>
+			<p>Implementar método abstrato da superclasse</p>
+			<p>Usar anotações <mark>@AuthenticationRequired</mark> e <mark>@AuthorizationRequired</mark</p>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="slide41"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Extensions</h2>
+			</header>
+			<p>+ Funcionalidades?</p>
+			<p>+ Plataformas?</p>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide331"><div>
+		<section>
+			<header>
+				<h2>Demo</h2>
+			</header>
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide42"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<p>Nosso 'Hello World' e prova de conceito</p>
+			<ul>
+				<li>Google App Engine (JDO + High Replication)</li>
+				<li><a href="http://cotopaxi-todolist.appspot.com/">http://cotopaxi-todolist.appspot.com/</a></li>
+				<li><a href="http://github.com/octahedron/todolist/">http://github.com/octahedron/todolist/</a></li>
+			</ul>
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/applicationconfig.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/model.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/dao.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/controller1.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/controller2.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/model.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide421"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - Demo - Todo list</h2>
+			</header>
+			<img src="pictures/todolist.png" />
+		</section>
+	</div></div>
+
+	<div class="slide" id="slide43"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi - O que ainda falta?</h2>
+			</header>
+			<ul>
+				<li>Documentação do <em>extensions</em></li>
+				<li>GZip interceptor</li>
+				<li>Internacionalização (i18n)</li>
+				<li>Outros manipuladores de sessão</li>
+				<li>Extensions modules management</li>
+				<li>Funcionalidades para Heroku e AWS :-)</li>
+				<li>Suporte a diferentes <em>template engines</em></li>
+				<li>Mais exemplos</li>
+				<li>Documentação em português</li>
+			</ul>
+		</section>
+	</div></div>
+	
+	<div class="slide shout" id="slide44"><div>
+		<section>
+			<header>
+				<h2>Obrigado!</h2>
+			</header>
+		</section>
+	</div></div>
+	
+	<div class="slide" id="our-info"><div>
+		<section>
+			<header>
+				<h2>Cotopaxi: Desenvolvimento Java web na nuvem</h2>
+			</header>
+			<p>Danilo Queiroz e Vítor Avelino, Octahedron</p>
+			<ul>
+				<li><a href="http://twitter.com/daniloqueiroz">@daniloqueiroz</a>, <a href="http://twitter.com/vitoravelino">@vitoravelino</a></li>
+				<li><a href="http://twitter.com/octahedronbr">@octahedronbr</a> - <a href="mailto:pepelsbey@gmail.com">contato@octahedron.com.br</a></li>
+				<li>#cotopaxi @ irc.freenode.net</li>
+			</ul>
+			<p>Apresentação: <a href="http://octahedron.github.com/talks/v-ensl/">http://octahedron.github.com/talks/v-ensl/</a><br />
+			Quem puder votar: <a href="http://is.gd/octajce">http://is.gd/octajce</a></p>
+		</section>
+	</div></div>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
