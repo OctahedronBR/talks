@@ -111,7 +111,7 @@
 			<header>
 				<h2>Como escalar?</h2>
 			</header>
-			<blockquote>Linguagens não escalam, arquiteturas escalam!</blockquote>
+			<blockquote>Linguagens não escalam. Arquiteturas escalam!</blockquote>
 			<span class="author">Felipe Ribeiro</span>
 		</section>
 	</div></div>
@@ -534,6 +534,9 @@
 			</header>
 			<pre>
 				<code>public class UserDAO extends <mark>GenericDAO&lt;User&gt;</mark> {</code>
+				<code>	public UserDAO() {</code>
+				<code>		super(<mark>User.class</mark>);</code>
+				<code>	}</code>
 				<code>	<span class="comment"> // save, delete, get, getAll, exists, count</span></code>
 				<code>}</code>
 			</pre>
@@ -641,32 +644,14 @@
 	<div class="slide" id="slide52"><div>
 		<section>
 			<header>
-				<h2>Cotopaxi - Demo - Todo list</h2>
-			</header>
-			<img src="pictures/model.png" />
-		</section>
-	</div></div>
-
-	<div class="slide" id="slide53"><div>
-		<section>
-			<header>
-				<h2>Cotopaxi - Demo - Todo list</h2>
-			</header>
-			<img src="pictures/todolist.png" />
-		</section>
-	</div></div>
-
-	<div class="slide" id="slide54"><div>
-		<section>
-			<header>
 				<h2>Cotopaxi - O que ainda falta?</h2>
 			</header>
 			<ul>
 				<li>Documentação do <em>extensions</em></li>
 				<li>GZip interceptor</li>
 				<li>Internacionalização (i18n)</li>
+				<li>Gerenciamento de módulos do extensions</li>
 				<li>Outros manipuladores de sessão</li>
-				<li>Extensions modules management</li>
 				<li>Funcionalidades para Heroku e AWS :-)</li>
 				<li>Suporte a diferentes <em>template engines</em></li>
 				<li>Mais exemplos</li>
@@ -675,7 +660,7 @@
 		</section>
 	</div></div>
 	
-	<div class="slide shout" id="slide55"><div>
+	<div class="slide shout" id="slide53"><div>
 		<section>
 			<header>
 				<h2>Obrigado!</h2>
